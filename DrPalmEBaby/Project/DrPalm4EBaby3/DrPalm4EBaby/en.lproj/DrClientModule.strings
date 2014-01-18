@@ -1,0 +1,45 @@
+/* 
+  DrClientModule.strings
+  DrPalm
+
+  Created by fgx_lion on 12-3-26.
+  Copyright (c) 2012年 DrCOM. All rights reserved.
+*/
+
+"DrClient_ModuleTitle" = "Intranet";
+
+"DrClient_UsernameText" = "Username:";
+"DrClient_PasswordText" = "Password:";
+"DrClient_username" = "username";
+"DrClient_password" = "password";
+"DrClient_Login" = "Login";
+"DrClient_RememberMyPassword" = "Remember my password";
+"DrClient_SignInAutomatically" = "Sign in Automatically";
+"DrClient_ReconnectAutomatically" = "Reconnect Automatically";
+"DrClient_UsedTime" = "Used time:";
+"DrClient_UsedFlux" = "Used flux:";
+"DrClient_Min" = "Min";
+"DrClient_MByte" = "MByte";
+"DrClient_Logout" = "Logout";
+
+"DrClient_Tips" = "Tips"; 
+"DrClient_OK" = "OK";
+"DrClient_EnterYourUsername" = "Please enter your username";
+"DrClient_EnterYourPassword" = "Please enter your password";
+"DrClient_AlreadyOnline" = "This equipment already onlie，do not need to log in";
+"DrClient_CanNotFind" = "Can not find Dr.COM web protocol";
+"DrClient_IPDoesNotAllow" = "The IP does not allow login base Dr.COM web technology";
+"DrClient_NotAllowLogin" = "The account does not allow login base Dr.COM web technology";
+"DrClient_NotAllowChangePassword" = "The account does not allow change password";
+"DrClient_InvalidAccountPassword" = "Invalid account or password, please login again";
+"DrClient_TieUp" = "This account is tie up, please contact network administration IP(%@) MAC(%@)";
+"DrClient_UseAppointedAddressOnlyIP" = "This account use on appointed address only IP(%@)";
+"DrClient_ChargeOverspend" = "This account charge be overspend or flux over";
+"DrClient_BreakOff" = "This account be break off";
+"DrClient_SystemBufferFull" = "System buffer full";
+"DrClient_TieUpCanNotAmend" = "This account is tie up, can not amend";
+"DrClient_ConfirmPasswordDiffer" = "The new and the confirm password are differ, can not amend";
+"DrClient_PasswordAmendSuccessed" = "The password amend successed";
+"DrClient_UseAppointedAddressOnlyMAC" = "This account use on appointed address only MAC(%@)";
+"DrClient_NotAllowUseNAT" = "This account does not allow use NAT";
+"DrClient_NoWiFi" = "Plase turn on Wi-Fi Networks";

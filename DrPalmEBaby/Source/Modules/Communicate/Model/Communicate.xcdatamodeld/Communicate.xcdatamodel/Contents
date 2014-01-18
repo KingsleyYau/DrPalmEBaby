@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CommunicateList" representedClassName="CommunicateList" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="message_id" attributeType="String" syncable="YES"/>
+        <attribute name="recv_cid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recvName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="send_cid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sendName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contactMan" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CommunicateMan" inverseName="contactList" inverseEntity="CommunicateMan" syncable="YES"/>
+    </entity>
+    <entity name="CommunicateMan" representedClassName="CommunicateMan" syncable="YES">
+        <attribute name="contact_id" attributeType="String" syncable="YES"/>
+        <attribute name="contactName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastMessageDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="unread" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contactList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CommunicateList" inverseName="contactMan" inverseEntity="CommunicateList" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CommunicateList" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CommunicateMan" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

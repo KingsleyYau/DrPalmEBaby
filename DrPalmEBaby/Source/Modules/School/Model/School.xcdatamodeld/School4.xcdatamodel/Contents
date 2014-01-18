@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SchoolFile" representedClassName="SchoolFile" syncable="YES">
+        <attribute name="contenttype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="fileext" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" attributeType="String" syncable="YES"/>
+        <attribute name="pathtype" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <relationship name="fullParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="fullImage" inverseEntity="SchoolImage" syncable="YES"/>
+        <relationship name="schoolCategoryLogo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolNewsCategory" inverseName="logoImage" inverseEntity="SchoolNewsCategory" syncable="YES"/>
+        <relationship name="smallParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="smallImage" inverseEntity="SchoolImage" syncable="YES"/>
+        <relationship name="thumParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="thumbImage" inverseEntity="SchoolImage" syncable="YES"/>
+    </entity>
+    <entity name="SchoolImage" representedClassName="SchoolImage" syncable="YES">
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fullImage" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolFile" inverseName="fullParent" inverseEntity="SchoolFile" syncable="YES"/>
+        <relationship name="mainImageParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNews" inverseName="mainImage" inverseEntity="SchoolNews" syncable="YES"/>
+        <relationship name="smallImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolFile" inverseName="smallParent" inverseEntity="SchoolFile" syncable="YES"/>
+        <relationship name="subImageParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNews" inverseName="subImage" inverseEntity="SchoolNews" syncable="YES"/>
+        <relationship name="thumbImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolFile" inverseName="thumParent" inverseEntity="SchoolFile" syncable="YES"/>
+    </entity>
+    <entity name="SchoolNews" representedClassName="SchoolNews" syncable="YES">
+        <attribute name="abstract" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookmarked" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="postdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="shareurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="story_id" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNewsCategory" inverseName="news" inverseEntity="SchoolNewsCategory" syncable="YES"/>
+        <relationship name="mainImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="mainImageParent" inverseEntity="SchoolImage" syncable="YES"/>
+        <relationship name="subImage" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="subImageParent" inverseEntity="SchoolImage" syncable="YES"/>
+    </entity>
+    <entity name="SchoolNewsCategory" representedClassName="SchoolNewsCategory" syncable="YES">
+        <attribute name="bShow" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="category_id" attributeType="String" syncable="YES"/>
+        <attribute name="expectedCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdateChannel" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdateChannelList" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="modulesname" optional="YES" attributeType="String" defaultValueString="schoolmodule" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titleofLastNews" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="logoImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolFile" inverseName="schoolCategoryLogo" inverseEntity="SchoolFile" syncable="YES"/>
+        <relationship name="news" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNews" inverseName="categories" inverseEntity="SchoolNews" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SchoolFile" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SchoolImage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SchoolNews" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SchoolNewsCategory" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

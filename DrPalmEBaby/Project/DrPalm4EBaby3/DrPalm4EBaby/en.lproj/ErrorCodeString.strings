@@ -1,0 +1,77 @@
+/* 
+  ErrorCodeString.strings
+  DrPalm
+
+  Created by fgx_lion on 12-3-26.
+  Copyright (c) 2012年 DrCOM. All rights reserved.
+*/
+"ErrorCode_Default" = "Server error";
+"ErrCode_InvalidSchoolKey" = "Invalid school key.";
+"ErrCode_UnopenSchoolGatway" = "School gatway does not exist.";
+"ErrCode_SendBugError" = "Send bug error.";
+"ErrCode_UnkownClientType" = "Unkown client type.";
+"ErrCode_NoNewPacket" = "No new packet.";
+"ErrCode_PacketNotExist" = "Packet not exist.";
+"ErrCode_UnkownError" = "Unkown error.";
+
+"ErrCode_AccountNotExist" = "Account does not exist.";
+"ErrCode_LoginInfoNotMatch" = "Account or password does not match.";
+"ErrCode_LoginParamEmpty" = "Login params cannot empty.";
+"ErrCode_InvalidSessionKey" = "Invalid session, please login again.";
+"ErrCode_InvalidProfileKey" = "Invalid profile key, please try again.";
+
+"ErrCode_InvalidSchoolId" = "无效商城ID";
+"ErrCode_AccounTypeEmpty" = "用户类型不能为空";
+"ErrCode_AccountTypeNotCorrect" = "用户类型不匹配";
+"ErrCode_AccountRightForbidden" = "用户没有兑奖权限";
+"ErrCode_AccountBlockup" = "用户已经停用";
+"ErrCode_AccountEmailEmpty" = "用户邮箱为空";
+
+"ErrCode_NotTeacher" = "It's not teacher.";
+"ErrCode_OrgNotExist" = "The organization does not exist.";
+
+"ErrCode_EventStartDateEmpty" = "Start date cannot empty.";
+"ErrCode_EventEndDateEmpty" = "End date cannot empty.";
+"ErrCode_ReceiverIDEmpty" = "Receiver cannot empty.";
+"ErrCode_ReceiverNameEmpty" = "Receiver name cannot empty.";
+"ErrCode_EventLocationEmpty" = "Location cannot empty.";
+"ErrCode_EventTypeEmpty" = "Type cannot empty.";
+"ErrCode_EventTitleEmpty" = "Title cannot empty.";
+"ErrCode_EventContentEmpty" = "Content cannot empty.";
+"ErrCode_EventUnknowError" = "Unknow error.";
+"ErrCode_EventInvalidEventID" = "Invalid event id.";
+
+// 新闻
+"ErrCode_NewsIdEmpty" = "新闻ID不可为空";
+"ErrCode_NewsVerifyEmpty" = "新闻审核状态不可为空";
+"ErrCode_NewsNotExist" = "新闻不存在";
+"ErrCode_NewsUnknowError" = "新闻未知错误";
+
+// 注册
+"ErrCode_AccountAlreadyExist" = "账号和手机号码存在";
+"ErrCode_PhoneNumberNotCorrect" = "手机号码必须11位";
+"ErrCode_PhoneNumberOnly" = "输入的不是手机号码";
+"ErrCode_CheckCodeEmpty" = "验证码为空";
+"ErrCode_CheckCodeInvalid" = "验证码过期";
+"ErrCode_CheckCodeNotCorrect" = "验证码不正确";
+
+// 抽奖
+"ErrCode_ActivityNotExist" = "活动不存在";
+"ErrCode_AccountForbidden" = "账号停用";
+"ErrCode_ActivityNotStart" = "非活动时间";
+"ErrCode_ActivityTooShort" = "参与间隔没到";
+"ErrCode_GiftCheckedAll" = "已达奖品数上限";
+"ErrCode_ActivityTheOne" = "只能中一次";
+"ErrCode_ActivityInvalid" = "失效活动";
+"ErrCode_GiftCheckCodeEmpty" = "兑奖码为空";
+"ErrCode_GiftCheckedAll2" = "奖品已经兑换完毕";
+"ErrCode_AccountNumberNull" = "会员卡号不能为空";
+"ErrCode_AccountNumberNotExist" = "会员卡号不存在";
+"ErrCode_CheckCodeNotExist" = "兑奖码不存在";
+"ErrCode_GiftGetAll" = "已达发放礼品数上限";
+"ErrCode_CouponCheckedAll" = "已达发放优惠卷上限";
+"ErrCode_ActivityIDEmpty" = "活动ID不可为空";
+"ErrCode_GiftIDEmpty" = "礼品ID不可为空";
+"ErrCode_BonusNotEnough" = "当前用户积分不足以参与本兑换活动";
+"ErrCode_GiftGetAll2" = "当前礼品已发放完毕";
+"ErrCode_GiftCheckedAll3" = "当前礼品已兑换完毕";

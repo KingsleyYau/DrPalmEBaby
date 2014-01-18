@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="11G63b" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GrowDiary" representedClassName="GrowDiary" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diaryid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="GrowDiaryForSent" representedClassName="GrowDiaryForSent" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diaryid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="HeadImage" representedClassName="HeadImage" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="privatealbumimage" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PrivateAlbum" inverseName="image" inverseEntity="PrivateAlbum" syncable="YES"/>
+        <relationship name="userinfohead" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="headimage" inverseEntity="UserInfo" syncable="YES"/>
+    </entity>
+    <entity name="OnlyWifi" representedClassName="OnlyWifi" syncable="YES">
+        <attribute name="isonlywifi" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+    </entity>
+    <entity name="PrivateAlbum" representedClassName="PrivateAlbum" syncable="YES">
+        <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="image" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="HeadImage" inverseName="privatealbumimage" inverseEntity="HeadImage" syncable="YES"/>
+    </entity>
+    <entity name="PrivateAlbumLastupdate" representedClassName="PrivateAlbumLastupdate" syncable="YES">
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES">
+        <attribute name="curscore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="headlastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isautologin" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="ispush" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isrememberme" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isshake" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="issound" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastlogintime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="levelupscore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pushend" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pushstart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceenddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="usertype" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="headimage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="HeadImage" inverseName="userinfohead" inverseEntity="HeadImage" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GrowDiary" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="GrowDiaryForSent" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="HeadImage" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="OnlyWifi" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="PrivateAlbum" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="PrivateAlbumLastupdate" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="UserInfo" positionX="160" positionY="192" width="128" height="315"/>
+    </elements>
+</model>

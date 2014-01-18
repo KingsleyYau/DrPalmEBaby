@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AroundTableViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" id="3" customClass="CommonListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3" id="QWp-yv-M5I">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-list-item-background.png" id="sc9-we-6BC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="class-sent-list-read.png" id="q4G-Gr-gfo">
+                        <rect key="frame" x="5" y="29" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </imageView>
+                    <view contentMode="scaleAspectFit" id="86" customClass="RequestImageView">
+                        <rect key="frame" x="25" y="5" width="65" height="65"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="我的标题很长很长很长很长很长的" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zVc-uU-tPh" userLabel="标题" customClass="TTTAttributedLabel">
+                        <rect key="frame" x="95" y="10" width="214" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.64705882349999999" green="0.37254901959999998" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="子标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2FK-0H-W4g" userLabel="子标题">
+                        <rect key="frame" x="95" y="29" width="199" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2013-10-18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="78" userLabel="普通时间">
+                        <rect key="frame" x="183" y="52" width="125" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.31372549019607843" green="0.31764705882352939" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="发送时间:2013-10-18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="igt-WC-hrB" userLabel="发送时间">
+                        <rect key="frame" x="203" y="50" width="110" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                        <color key="textColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="回复时间:2013-10-18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ewZ-Vu-9az" userLabel="回复时间">
+                        <rect key="frame" x="203" y="62" width="110" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                        <color key="textColor" red="0.31372549020000001" green="0.31764705879999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-list-accessory.png" id="HiY-pl-mdL">
+                        <rect key="frame" x="293" y="32" width="16" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-list-icon-bookmark.png" id="sFq-El-F2M" userLabel="收藏">
+                        <rect key="frame" x="95" y="52" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-list-icon-emergent.png" id="a1v-Ew-LZ7" userLabel="紧急">
+                        <rect key="frame" x="117" y="52" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-list-icon-attachment.png" id="byv-sY-cbV" userLabel="附件">
+                        <rect key="frame" x="139" y="52" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-list-icon-comment-read.png" id="T5b-z2-Tuq" userLabel="评论">
+                        <rect key="frame" x="157" y="52" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-list-icon-comment-review.png" id="xPa-hM-2hs" userLabel="回评">
+                        <rect key="frame" x="179" y="52" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accessoryView" destination="HiY-pl-mdL" id="2Dg-Hq-wbP"/>
+                <outlet property="attachmenttView" destination="byv-sY-cbV" id="K34-9T-hl3"/>
+                <outlet property="backgroundView" destination="sc9-we-6BC" id="1gR-8O-WA0"/>
+                <outlet property="bookmarkView" destination="sFq-El-F2M" id="mGG-xU-dh5"/>
+                <outlet property="commentView" destination="T5b-z2-Tuq" id="g6U-f0-5jZ"/>
+                <outlet property="emergentView" destination="a1v-Ew-LZ7" id="Nx8-V1-Kz9"/>
+                <outlet property="readImageView" destination="q4G-Gr-gfo" id="RBr-v0-13j"/>
+                <outlet property="requestImageView" destination="86" id="0mi-qS-QDJ"/>
+                <outlet property="reviewView" destination="xPa-hM-2hs" id="5Z5-vY-2gb"/>
+                <outlet property="subLabel" destination="2FK-0H-W4g" id="JZ6-W4-ylz"/>
+                <outlet property="timeLabel" destination="78" id="cap-3P-w0L"/>
+                <outlet property="timeLabel1" destination="igt-WC-hrB" id="fFY-qu-86K"/>
+                <outlet property="timeLabel2" destination="ewZ-Vu-9az" id="9ku-LN-rZl"/>
+                <outlet property="titleLabel" destination="zVc-uU-tPh" id="1So-uk-Bte"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="class-sent-list-read.png" width="44" height="44"/>
+        <image name="common-list-accessory.png" width="44" height="44"/>
+        <image name="common-list-icon-attachment.png" width="60" height="60"/>
+        <image name="common-list-icon-bookmark.png" width="60" height="60"/>
+        <image name="common-list-icon-comment-read.png" width="60" height="60"/>
+        <image name="common-list-icon-comment-review.png" width="60" height="60"/>
+        <image name="common-list-icon-emergent.png" width="60" height="60"/>
+        <image name="common-list-item-background.png" width="1" height="152"/>
+    </resources>
+</document>

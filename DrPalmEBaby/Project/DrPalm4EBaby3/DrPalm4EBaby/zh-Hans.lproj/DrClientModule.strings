@@ -1,0 +1,46 @@
+/* 
+  DrClientModule.strings
+  DrPalm
+
+  Created by fgx_lion on 12-3-26.
+  Copyright (c) 2012年 DrCOM. All rights reserved.
+  简体
+*/
+
+"DrClient_ModuleTitle" = "内网";
+
+"DrClient_UsernameText" = "帐  号：";
+"DrClient_PasswordText" = "密  码：";
+"DrClient_username" = "帐  号";
+"DrClient_password" = "密  码";
+"DrClient_Login" = "登   录";
+"DrClient_RememberMyPassword" = "保存密码";
+"DrClient_SignInAutomatically" = "自动登录";
+"DrClient_ReconnectAutomatically" = "自动重连";
+"DrClient_UsedTime" = "使用时长：";
+"DrClient_UsedFlux" = "使用流量：";
+"DrClient_Min" = "分钟";
+"DrClient_MByte" = "兆";
+"DrClient_Logout" = "注   销";
+
+"DrClient_Tips" = "提示"; 
+"DrClient_OK" = "确  定";
+"DrClient_EnterYourUsername" = "请输入帐号";
+"DrClient_EnterYourPassword" = "请输入密码";
+"DrClient_AlreadyOnline" = "该设备已经在线，无需登录";
+"DrClient_CanNotFind" = "未能定位 Dr.COM 协议";
+"DrClient_IPDoesNotAllow" = "本IP不允许使用本客户端登录";
+"DrClient_NotAllowLogin" = "本帐号不允许使用本客户端登录";
+"DrClient_NotAllowChangePassword" = "本帐户不允许修改密码";
+"DrClient_InvalidAccountPassword" = "帐户或密码不对，请重新输入";
+"DrClient_TieUp" = "该帐号正在使用中，请您与网管联系 IP(%@) MAC(%@)";
+"DrClient_UseAppointedAddressOnlyIP" = "本帐号只能使用指定的地址 IP(%@)";
+"DrClient_ChargeOverspend" = "本帐号费用超支或时长流量超过限制";
+"DrClient_BreakOff" = "本帐号暂停使用";
+"DrClient_SystemBufferFull" = "服务器繁忙";
+"DrClient_TieUpCanNotAmend" = "本帐号已在使用，不能修改";
+"DrClient_ConfirmPasswordDiffer" = "新密码与确认密码不匹配，不能修改";
+"DrClient_PasswordAmendSuccessed" = "密码修改成功";
+"DrClient_UseAppointedAddressOnlyMAC" = "本帐号只能在指定地址使用 MAC(%@)";
+"DrClient_NotAllowUseNAT" = "本帐号不允许使用NAT";
+"DrClient_NoWiFi" = "请启用Wi-Fi网络";

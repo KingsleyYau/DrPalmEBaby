@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="11E53" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Agent" representedClassName="Agent" syncable="YES">
+        <attribute name="localID" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="directSubLocalArea" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocalArea" inverseName="directParentAgent" inverseEntity="LocalArea" syncable="YES"/>
+    </entity>
+    <entity name="LocalArea" representedClassName="LocalArea" syncable="YES">
+        <attribute name="bookmark" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="local_id" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" defaultValueString="local" syncable="YES"/>
+        <relationship name="directParentAgent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Agent" inverseName="directSubLocalArea" inverseEntity="Agent" syncable="YES"/>
+        <relationship name="logo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="LocalAreaFile" inverseName="logoParent" inverseEntity="LocalAreaFile" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalArea" inverseName="subs" inverseEntity="LocalArea" syncable="YES"/>
+        <relationship name="subs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LocalArea" inverseName="parent" inverseEntity="LocalArea" syncable="YES"/>
+    </entity>
+    <entity name="LocalAreaFile" representedClassName="LocalAreaFile" syncable="YES">
+        <attribute name="contenttype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="fileext" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" attributeType="String" syncable="YES"/>
+        <attribute name="pathtype" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="logoParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocalArea" inverseName="logo" inverseEntity="LocalArea" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LocalArea" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="LocalAreaFile" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Agent" positionX="160" positionY="192" width="128" height="90"/>
+    </elements>
+</model>

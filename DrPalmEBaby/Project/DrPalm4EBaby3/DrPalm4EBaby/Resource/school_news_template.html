@@ -1,0 +1,102 @@
+<!-- Create by Kingsley.Yau 2013.8.1-->
+<html>
+	<head>
+    <title>__TITLE__</title>
+    <style type="text/css">
+		body {font-family: Helvetica;font-size: 14px;margin: 5px;padding: 0; overflow: hidden; word-break:break-all; word-wrap:break-all; width:__WIDTH__px;}
+		a { color: #990000; }
+		.slugline {font-weight: bold;font-size:20px;margin: 0;padding: 0;word-break:break-all; width:100%;}
+		.dek {font-size: 16px;margin: 14px 0;color: #505050;}
+		.dek:empty { margin: 0; } /* CSS 3: shrink if no content */
+		.inlineControls {
+				float: right;
+				-webkit-user-select: none;
+				position: relative;
+				top: 6px;
+		}
+		.inlineControls a {
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+		.inlineControls span {
+				display: inline-block;
+				width: 44px;
+				height: 38px;
+				-webkit-user-select: none;
+		}
+		.byline {font-size: 11px;color: #505050;min-height:30px;}
+		.inline-separator {margin: 0 3px;}
+		 #content {border-top: 1px dotted #F00;}
+		.credential {font-size:8pt;}
+		#image {float:right;margin: 16px 0 -1px 8px;}
+		#image img.thumbnail {float:right; border: 1px solid #505050; /* scale to width respecting aspect */}
+		#image img.enlarge { float:right; margin-left: 4px; }
+		#image div { float:right; margin-top: 2px; margin-right:-2px; }
+		#image a { text-align:right; font-size:11px;  text-decoration:none; color:#777;}
+		#image a div { margin-top: 0; }
+		#image a+a div { margin-top: 2px; }
+		#body {color: #202020; margin-top: 14px;}
+    </style>
+  </head>
+  
+  <body bgcolor="#F7F7F7">
+  	<h1 class="slugline" >__TITLE__</h1>
+  	<p class="byline">
+  		<span class="credit">by <span class="author">__AUTHOR__</span><br /></span>
+      <span class="postdate">__DATE__</span>
+    </p>    
+    <div id="content" style="width:100%">
+   		<div id="image">
+   			<a id="thumbnailLink" href="image"><img class="thumbnail" src="data:image/jpeg;base64, __THUMBNAIL_DATA__" width="__THUMBNAIL_WIDTH__" height="__THUMBNAIL_HEIGHT__">
+   				<br />
+   			</a>
+    		<a href="image">
+    			<div>共 <span id="imageCount">张</span><img class="enlarge" src="templateImage/button-zoom-in@2x.png" width="30" height="30" alt="zoom"></div>
+    		</a>
+    	</div>
+    	<p class="dek">__DEK__</p><div id="body" style="width:100%">__BODY__</div>
+   	</div>		
+  </body>
+  
+  <script type="text/javascript" charset="utf-8" defer>
+  	
+  	// hide author if not set
+  	function HideAuthor() {
+  		var authorIsEmpty = (document.getElementsByClassName("author")[0].childNodes.length == 0);
+  		if (authorIsEmpty) {
+  			var creditNode = document.getElementsByClassName("credit")[0];
+  			creditNode.parentElement.removeChild(creditNode);
+  		}
+  		var imageCount = __GALLERY_COUNT__;
+  		// remove #image block there are no images at all
+  		if (imageCount == 0) {
+  			var imageNode = document.getElementById("image");
+        imageNode.parentElement.removeChild(imageNode);
+      } else {
+      	document.getElementById("imageCount").innerHTML = imageCount + ("张");
+      }
+      // remove img.thumbnail if thumbnail is not set (empty src attributes == the base URL)
+      if (document.getElementsByClassName("thumbnail").length > 0 && document.getElementsByClassName("thumbnail")[0].src.indexOf("file:") == 0) {
+      	var imageNode = document.getElementById("thumbnailLink");
+        imageNode.parentElement.removeChild(imageNode);
+  		}
+  	}
+  	
+  	// resize all images in body
+  	function ResizeImages() {
+			var myimg, oldwidth;
+			var maxwidth = __WIDTH__;
+			var imgs = document.getElementById('body').getElementsByTagName('img');
+			for(i = 0; i<imgs.length; i++) {
+				myimg = imgs[i];
+				if(myimg.width > maxwidth) {
+					oldwidth = myimg.width;
+					var newHeight = myimg.height * (maxwidth / oldwidth);
+					myimg.style.height = newHeight;
+					myimg.style.width = maxwidth;
+				}
+			}
+		}
+		HideAuthor();
+		ResizeImages();
+  </script>
+</html>

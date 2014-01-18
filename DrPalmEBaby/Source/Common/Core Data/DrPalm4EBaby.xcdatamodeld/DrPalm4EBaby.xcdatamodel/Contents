@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ClassAnwserContent" representedClassName="ClassAnwserContent" syncable="YES">
+        <attribute name="anwser_id" attributeType="String" syncable="YES"/>
+        <attribute name="anwserDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="anwserPub_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="anwserPubName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="receiver_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="receiverName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="anwserMan" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ClassAnwserMan" inverseName="anwserContents" inverseEntity="ClassAnwserMan" syncable="YES"/>
+    </entity>
+    <entity name="ClassAnwserMan" representedClassName="ClassAnwserMan" syncable="YES">
+        <attribute name="anwserMan_id" attributeType="String" syncable="YES"/>
+        <attribute name="awsermanName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasNewAnwser" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastawsTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="anwserContents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassAnwserContent" inverseName="anwserMan" inverseEntity="ClassAnwserContent" syncable="YES"/>
+        <relationship name="eventParent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClassEvent" inverseName="anwserMans" inverseEntity="ClassEvent" syncable="YES"/>
+        <relationship name="eventSentParent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClassEventSent" inverseName="anwserMans" inverseEntity="ClassEventSent" syncable="YES"/>
+    </entity>
+    <entity name="ClassEvent" representedClassName="ClassEvent" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookmarked" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="cancelDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="cleanbody" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="event_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasAtt" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hasLastAws" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="ifshow" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isReadforServer" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastAwsTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastreadtime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orieventid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oristatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="pub_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortField" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="anwserMans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassAnwserMan" inverseName="eventParent" inverseEntity="ClassAnwserMan" syncable="YES"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="File" inverseName="classAttachment" inverseEntity="File" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventCategory" inverseName="events" inverseEntity="ClassEventCategory" syncable="YES"/>
+        <relationship name="mainImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ClassImage" inverseName="mainImageParent" inverseEntity="ClassImage" syncable="YES"/>
+    </entity>
+    <entity name="ClassEventCategory" representedClassName="ClassEventCategory" syncable="YES">
+        <attribute name="bShow" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="category_id" attributeType="String" syncable="YES"/>
+        <attribute name="expectedCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdateChannel" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdateChannelList" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="modulesname" attributeType="String" defaultValueString="eventmodule" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titleofLastEvent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unreadcount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEvent" inverseName="categories" inverseEntity="ClassEvent" syncable="YES"/>
+        <relationship name="eventsDraft" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventDraft" inverseName="categories" inverseEntity="ClassEventDraft" syncable="YES"/>
+        <relationship name="eventsSent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventSent" inverseName="categories" inverseEntity="ClassEventSent" syncable="YES"/>
+        <relationship name="logoImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="classCategory" inverseEntity="File" syncable="YES"/>
+    </entity>
+    <entity name="ClassEventDraft" representedClassName="ClassEventDraft" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="ifshow" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orieventid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oristatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="addressees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassOrg" inverseName="eventDrafts" inverseEntity="ClassOrg" syncable="YES"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventDraftAttachment" inverseName="eventDraft" inverseEntity="ClassEventDraftAttachment" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventCategory" inverseName="eventsDraft" inverseEntity="ClassEventCategory" syncable="YES"/>
+        <relationship name="mainImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ClassImage" inverseName="mainImageDraft" inverseEntity="ClassImage" syncable="YES"/>
+    </entity>
+    <entity name="ClassEventDraftAttachment" representedClassName="ClassEventDraftAttachment" syncable="YES">
+        <attribute name="attid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventDraft" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ClassEventDraft" inverseName="attachments" inverseEntity="ClassEventDraft" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="ClassEventSent" representedClassName="ClassEventSent" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cancelDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="cleanbody" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="event_id" attributeType="String" syncable="YES"/>
+        <attribute name="hasAtt" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hasLastAws" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="ifshow" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isRead" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastAwsTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orieventid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oristatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="pub_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="readCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="reader" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="readTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sortField" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unreader" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="anwserMans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassAnwserMan" inverseName="eventSentParent" inverseEntity="ClassAnwserMan" syncable="YES"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="File" inverseName="classSentAttachment" inverseEntity="File" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventCategory" inverseName="eventsSent" inverseEntity="ClassEventCategory" syncable="YES"/>
+        <relationship name="mainImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ClassImage" inverseName="mainImageSentParent" inverseEntity="ClassImage" syncable="YES"/>
+    </entity>
+    <entity name="ClassImage" representedClassName="ClassImage" syncable="YES">
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fullImage" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="classImageFull" inverseEntity="File" syncable="YES"/>
+        <relationship name="mainImageDraft" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventDraft" inverseName="mainImage" inverseEntity="ClassEventDraft" syncable="YES"/>
+        <relationship name="mainImageParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEvent" inverseName="mainImage" inverseEntity="ClassEvent" syncable="YES"/>
+        <relationship name="mainImageSentParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventSent" inverseName="mainImage" inverseEntity="ClassEventSent" syncable="YES"/>
+        <relationship name="smallImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="classImageSmall" inverseEntity="File" syncable="YES"/>
+        <relationship name="thumbImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="classImageThumb" inverseEntity="File" syncable="YES"/>
+    </entity>
+    <entity name="ClassOrg" representedClassName="ClassOrg" syncable="YES">
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="orgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orgLeafCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="orgName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orgPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orgStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orgType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventDrafts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventDraft" inverseName="addressees" inverseEntity="ClassEventDraft" syncable="YES"/>
+        <relationship name="orgParents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassOrg" inverseName="orgSubs" inverseEntity="ClassOrg" syncable="YES"/>
+        <relationship name="orgSubs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassOrg" inverseName="orgParents" inverseEntity="ClassOrg" syncable="YES"/>
+        <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassUserTopOrg" inverseName="topOrgs" inverseEntity="ClassUserTopOrg" syncable="YES"/>
+    </entity>
+    <entity name="ClassUnRead" representedClassName="ClassUnRead" syncable="YES">
+        <attribute name="unreadcount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ClassUserTopOrg" representedClassName="ClassUserTopOrg" syncable="YES">
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="topOrgs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassOrg" inverseName="user" inverseEntity="ClassOrg" syncable="YES"/>
+    </entity>
+    <entity name="CommunicateList" representedClassName="CommunicateList" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="message_id" attributeType="String" syncable="YES"/>
+        <attribute name="recv_cid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recvName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="send_cid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sendName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contactMan" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CommunicateMan" inverseName="contactList" inverseEntity="CommunicateMan" syncable="YES"/>
+    </entity>
+    <entity name="CommunicateMan" representedClassName="CommunicateMan" syncable="YES">
+        <attribute name="contact_id" attributeType="String" syncable="YES"/>
+        <attribute name="contactName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastMessageDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contactList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CommunicateList" inverseName="contactMan" inverseEntity="CommunicateList" syncable="YES"/>
+    </entity>
+    <entity name="File" representedClassName="ClassFile" syncable="YES">
+        <attribute name="attid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contenttype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="fileext" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" attributeType="String" syncable="YES"/>
+        <attribute name="pathtype" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="classAttachment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClassEvent" inverseName="attachments" inverseEntity="ClassEvent" syncable="YES"/>
+        <relationship name="classCategory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEventCategory" inverseName="logoImage" inverseEntity="ClassEventCategory" syncable="YES"/>
+        <relationship name="classImageFull" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassImage" inverseName="fullImage" inverseEntity="ClassImage" syncable="YES"/>
+        <relationship name="classImageSmall" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassImage" inverseName="smallImage" inverseEntity="ClassImage" syncable="YES"/>
+        <relationship name="classImageThumb" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassImage" inverseName="thumbImage" inverseEntity="ClassImage" syncable="YES"/>
+        <relationship name="classSentAttachment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClassEventSent" inverseName="attachments" inverseEntity="ClassEventSent" syncable="YES"/>
+        <relationship name="schoolCategory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNewsCategory" inverseName="logoImage" inverseEntity="SchoolNewsCategory" syncable="YES"/>
+        <relationship name="schoolImageFull" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="fullImage" inverseEntity="SchoolImage" syncable="YES"/>
+        <relationship name="schoolImageSmall" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="smallImage" inverseEntity="SchoolImage" syncable="YES"/>
+        <relationship name="schoolImageThumb" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="thumbImage" inverseEntity="SchoolImage" syncable="YES"/>
+    </entity>
+    <entity name="GrowDiary" representedClassName="GrowDiary" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diaryid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="GrowDiaryForSent" representedClassName="GrowDiaryForSent" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diaryid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="HeadImage" representedClassName="HeadImage" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="privatealbumimage" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PrivateAlbum" inverseName="image" inverseEntity="PrivateAlbum" syncable="YES"/>
+        <relationship name="userinfohead" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="headimage" inverseEntity="UserInfo" syncable="YES"/>
+    </entity>
+    <entity name="LastUpdate" representedClassName="LastUpdate" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="2001-01-01 00:00:00 +0000" syncable="YES"/>
+        <attribute name="unReadCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="LatestItem" representedClassName="LatestItem" syncable="YES">
+        <attribute name="category_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_id" attributeType="String" syncable="YES"/>
+        <attribute name="lastLocalUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OnlyWifi" representedClassName="OnlyWifi" syncable="YES">
+        <attribute name="isonlywifi" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+    </entity>
+    <entity name="PrivateAlbum" representedClassName="PrivateAlbum" syncable="YES">
+        <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="image" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="HeadImage" inverseName="privatealbumimage" inverseEntity="HeadImage" syncable="YES"/>
+    </entity>
+    <entity name="PrivateAlbumLastupdate" representedClassName="PrivateAlbumLastupdate" syncable="YES">
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SchoolImage" representedClassName="SchoolImage" syncable="YES">
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fullImage" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="schoolImageFull" inverseEntity="File" syncable="YES"/>
+        <relationship name="mainImageParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNews" inverseName="mainImage" inverseEntity="SchoolNews" syncable="YES"/>
+        <relationship name="smallImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="schoolImageSmall" inverseEntity="File" syncable="YES"/>
+        <relationship name="subImageParent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNews" inverseName="subImage" inverseEntity="SchoolNews" syncable="YES"/>
+        <relationship name="thumbImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="schoolImageThumb" inverseEntity="File" syncable="YES"/>
+    </entity>
+    <entity name="SchoolNews" representedClassName="SchoolNews" syncable="YES">
+        <attribute name="abstract" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookmarked" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="postdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="shareurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="story_id" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNewsCategory" inverseName="news" inverseEntity="SchoolNewsCategory" syncable="YES"/>
+        <relationship name="mainImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="mainImageParent" inverseEntity="SchoolImage" syncable="YES"/>
+        <relationship name="subImage" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolImage" inverseName="subImageParent" inverseEntity="SchoolImage" syncable="YES"/>
+    </entity>
+    <entity name="SchoolNewsCategory" representedClassName="SchoolNewsCategory" syncable="YES">
+        <attribute name="bShow" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="category_id" attributeType="String" syncable="YES"/>
+        <attribute name="expectedCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdateChannel" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdateChannelList" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="modulesname" optional="YES" attributeType="String" defaultValueString="schoolmodule" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titleofLastNews" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="logoImage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="schoolCategory" inverseEntity="File" syncable="YES"/>
+        <relationship name="news" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SchoolNews" inverseName="categories" inverseEntity="SchoolNews" syncable="YES"/>
+    </entity>
+    <entity name="SystemMessage" representedClassName="SystemMessage" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inactivetime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isRead" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="system_id" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES">
+        <attribute name="curscore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="headlastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isautologin" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="ispush" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isrememberme" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isshake" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="issound" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastlogintime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastupdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="levelupscore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pushend" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pushstart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serviceenddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="usertype" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="headimage" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="HeadImage" inverseName="userinfohead" inverseEntity="HeadImage" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ClassAnwserContent" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassAnwserMan" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassEvent" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassEventCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassEventDraft" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassEventDraftAttachment" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassEventSent" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassImage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassOrg" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassUnRead" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ClassUserTopOrg" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="File" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SchoolImage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SchoolNews" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SchoolNewsCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CommunicateList" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CommunicateMan" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GrowDiary" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GrowDiaryForSent" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="HeadImage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="LastUpdate" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="LatestItem" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="OnlyWifi" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PrivateAlbum" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PrivateAlbumLastupdate" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SystemMessage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="UserInfo" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
