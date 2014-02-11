@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    self.shareDelegate = self;
     [self initWelcomImage];
 
 }
@@ -117,5 +117,25 @@
         self.shareButton.hidden = YES;
         self.enterButton.hidden = YES;
     }
+}
+#pragma mark - 分享回调 (ShareItemDelegate)
+- (NSString *)actionSheetTitle {
+	return @"";
+}
+- (NSString *)emailSubject {
+	return @"";
+}
+
+- (NSString *)contentBody {
+    return  [self emailBody];
+}
+
+- (NSString *)emailBody {
+    NSString* body = [NSString stringWithFormat:@"%@%@", NSLocalizedString(@"MoreShareContent", nil), NSLocalizedString(@"MoreDownloadUrl", nil)];
+    return body;
+}
+- (NSString*)urlBody
+{
+    return [self emailBody];
 }
 @end

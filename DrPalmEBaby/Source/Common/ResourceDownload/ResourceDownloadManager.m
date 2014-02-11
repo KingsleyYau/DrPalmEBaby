@@ -183,6 +183,7 @@
 
 - (void)handleCheckResourcePacket:(id)data
 {
+    [self cancelCheck];
     DrPalmGateWayManager* gatewayManager = DrPalmGateWayManagerInstance();
     gatewayManager.getPwdUrl = @"";
     NSMutableString *error = [NSMutableString string];
@@ -281,6 +282,7 @@
 {
     self.resourcePackets = nil;
     self.resourceTimestamp = nil;
+    [_requestOperator cancel];
 }
 
 #pragma mark - Download resource packet

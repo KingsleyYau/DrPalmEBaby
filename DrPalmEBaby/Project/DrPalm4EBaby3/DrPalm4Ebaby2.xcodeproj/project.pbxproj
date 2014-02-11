@@ -7647,7 +7647,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 恒 邱 (7255WBKD55)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 恒 邱 (7255WBKD55)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -7677,7 +7677,7 @@
 					"-lupnpx",
 				);
 				PRODUCT_NAME = DrPalm4Ebaby2;
-				PROVISIONING_PROFILE = "25E91E63-B350-43D0-9737-EEB26DDBB493";
+				PROVISIONING_PROFILE = "AD98C0C4-5D79-4251-B27C-CBF7A1AAB07D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AD98C0C4-5D79-4251-B27C-CBF7A1AAB07D";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Source/Header\" \"$(SRCROOT)/../../../Modules/CommonWidget/CommonWidget\"/** \"$(SRCROOT)/../../../Modules/NetworkWidget/NetworkWidget\"/** \"$(SRCROOT)/../../../Modules/UIWidget/UIWidget\"/**";
@@ -7691,7 +7691,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 恒 邱 (7255WBKD55)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 恒 邱 (7255WBKD55)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -7720,8 +7720,8 @@
 					"-lupnpx",
 				);
 				PRODUCT_NAME = DrPalm4Ebaby2;
-				PROVISIONING_PROFILE = "25E91E63-B350-43D0-9737-EEB26DDBB493";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25E91E63-B350-43D0-9737-EEB26DDBB493";
+				PROVISIONING_PROFILE = "AD98C0C4-5D79-4251-B27C-CBF7A1AAB07D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AD98C0C4-5D79-4251-B27C-CBF7A1AAB07D";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../Source/Header\" \"$(SRCROOT)/../../../Modules/CommonWidget/CommonWidget\"/** \"$(SRCROOT)/../../../Modules/NetworkWidget/NetworkWidget\"/** \"$(SRCROOT)/../../../Modules/UIWidget/UIWidget\"/**";
 				WRAPPER_EXTENSION = app;

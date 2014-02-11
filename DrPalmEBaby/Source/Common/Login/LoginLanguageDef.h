@@ -35,7 +35,7 @@
 #define LoginButtonLogout    ToLocalizedString(@"Login_ButtonLogout")
 
 // tips
-#define LoginUserOrPswError ToLocalizedString(@"Login_UserPswError")
+#define LoginUserOrPswError ToLocalizedString(@"LoginUserPswError")
 #define LoginConnectFail    ToLocalizedString(@"Login_ConnectFail")
 #define LoginNoWiFiConnection   ToLocalizedString(@"Login_NoWiFiConnection")
 #define LoginLocalTips      ToLocalizedString(@"LoginLocalTips")

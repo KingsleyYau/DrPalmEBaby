@@ -7,6 +7,7 @@
 //
 
 #import "ResourcePacketManager.h"
+#import "ResourceDownloadManager.h"
 
 @implementation ResourcePacketInfo
 
@@ -152,19 +153,20 @@
 
 - (NSString *)resourceFilePath:(NSString*)filePath {
     NSString *path = @"";
-    DrPalmGateWayManager* gateWayManager = DrPalmGateWayManagerInstance();
-    NSString* schoolkey = gateWayManager.schoolKey;
-    ResourcePacketInfo* packinfo = [self findResPacketWithSchoolKey:schoolkey];
-    
-    if(packinfo.resourcepath.length > 0) {
-        if ([@"/" isEqualToString:[filePath substringWithRange:NSMakeRange(0, 1)]]
-            || [@"\\" isEqualToString:[filePath substringWithRange:NSMakeRange(0, 1)]]){
-            path = [NSString stringWithFormat:@"%@%@", packinfo.resourcepath, filePath];
-        }
-        else{
-            path = [NSString stringWithFormat:@"%@/%@", packinfo.resourcepath, filePath];
-        }
-    }
+//    DrPalmGateWayManager* gateWayManager = DrPalmGateWayManagerInstance();
+//    NSString* schoolkey = gateWayManager.schoolKey;
+//    ResourcePacketInfo* packinfo = [self findResPacketWithSchoolKey:schoolkey];
+//    
+//    if(packinfo.resourcepath.length > 0) {
+//        if ([@"/" isEqualToString:[filePath substringWithRange:NSMakeRange(0, 1)]]
+//            || [@"\\" isEqualToString:[filePath substringWithRange:NSMakeRange(0, 1)]]){
+//            path = [NSString stringWithFormat:@"%@%@", packinfo.resourcepath, filePath];
+//        }
+//        else{
+//            path = [NSString stringWithFormat:@"%@/%@", packinfo.resourcepath, filePath];
+//        }
+//    }
+    path = [NSString stringWithFormat:@"%@/%@", [ResourceDownloadManager toursPathWithSchoolKey], filePath];
     return path;
 }
 @end

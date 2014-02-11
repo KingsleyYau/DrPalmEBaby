@@ -167,13 +167,18 @@ typedef enum {
     
     // section 2
     array = [NSMutableArray array];
+    
     // 幼儿园集合
-    dictionary = [NSMutableDictionary dictionary];
-    viewSize = CGSizeMake(_tableView.frame.size.width, [CommonTableViewCell cellHeight]);
-    rowSize = [NSValue valueWithCGSize:viewSize];
-    [dictionary setValue:rowSize forKey:ROW_SIZE];
-    [dictionary setValue:[NSNumber numberWithInteger:RowTypeEBabySet] forKey:ROW_TYPE];
-    [array addObject:dictionary];
+    id hideEbabySet = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"IsHideEbabySet"];
+    if(!(hideEbabySet && [hideEbabySet boolValue]))
+    {
+        dictionary = [NSMutableDictionary dictionary];
+        viewSize = CGSizeMake(_tableView.frame.size.width, [CommonTableViewCell cellHeight]);
+        rowSize = [NSValue valueWithCGSize:viewSize];
+        [dictionary setValue:rowSize forKey:ROW_SIZE];
+        [dictionary setValue:[NSNumber numberWithInteger:RowTypeEBabySet] forKey:ROW_TYPE];
+        [array addObject:dictionary];
+    }
     
     // 帮助
     dictionary = [NSMutableDictionary dictionary];

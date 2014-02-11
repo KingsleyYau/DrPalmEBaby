@@ -45,8 +45,6 @@
     //[self.mailButton setTitle:NSLocalizedString(@"SchoolPrincipalMailbox", nil) forState:UIControlStateNormal];
     self.mailLabel.text = NSLocalizedString(@"SchoolPrincipalMailbox", nil);
     [self setupGridView];
-    
-    
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -64,6 +62,10 @@
     }
     else
         [self loadCategoryFromServer];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self cancel];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -86,7 +88,6 @@
     [nvc pushViewController:vc animated:YES gesture:YES];
 }
 - (IBAction)mailAction:(id)sender {
-    return;
     // 院长信箱
     UIStoryboard *storyBoard = AppDelegate().storyBoard;
     PutConsultViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"PutConsultViewController"];

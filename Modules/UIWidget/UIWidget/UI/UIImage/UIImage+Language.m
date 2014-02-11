@@ -49,7 +49,9 @@
     UIImage *image = [UIImage imageWithContentsOfFile:newPath];
     if(!image) {
         // 找不到对应的图片, 用原路径的图片
-        image = [UIImage imageWithContentsOfFile:path];
+        newPath = [array objectAtIndex:0];
+        newPath = [newPath stringByAppendingString:suffix];
+        image = [UIImage imageWithContentsOfFile:newPath];
     }
     return image;
 }

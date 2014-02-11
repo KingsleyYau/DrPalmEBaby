@@ -22,7 +22,7 @@
 #define SWITCH_AUTOLOGIN            @"AutoLogin"
 #define ENCRYPT_KEY                 @"drcom"
 
-@interface MainTabBarController () <LoginManagerDelegate> {
+@interface MainTabBarController () <LoginManagerDelegate, ResourceDownloadManagerDelegate> {
     BOOL _hideRightButton;
     BOOL _autoLogin;
     NSString* _lastSchoolKey;
@@ -45,6 +45,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.delegate = self;
+    
     
     // 初始化本地分类
     [SchoolDataManager staticCategory];
@@ -136,6 +137,16 @@
     // TODO:设置右边按钮
     self.navigationItem.rightBarButtonItem = self.selectedViewController.navigationItem.rightBarButtonItem;
     self.navigationItem.rightBarButtonItems = self.selectedViewController.navigationItem.rightBarButtonItems;
+    
+    // 标题栏
+    UIImage *image = nil;
+    image = [UIImage imageWithContentsOfFileLanguage:[ResourcePacketManagerInstance() resourceFilePath:NavigationTitleImage] ofType:@"png"];
+    if (!image) {
+        image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:NavigationDefaultTitleImage ofType:@"png"]];
+    }
+    nvc.customTitleImage = image;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    self.navigationItem.titleView = imageView;
 }
 - (void)resetNavigationBar {
 }
@@ -159,6 +170,7 @@
     
     if(!self.resDownLoadManager) {
         self.resDownLoadManager = [[ResourceDownloadManager alloc] init];
+        [self.resDownLoadManager addDelegate:self];
     }
     [self.resDownLoadManager checkResourcePacket:timestamp];
 }
@@ -310,5 +322,9 @@
 - (void)getGateWaySuccess {
     // 获取网关成功,开始获取资源包
     [self checkResPacket];
+}
+#pragma mark - 获取资源包回调
+- (void)downloadFinish:(ResourceDownloadManager*)resourceDownloadManager packet:(ResourcePacket*)packet left:(NSInteger)left {
+    [self setupNavigationBar];
 }
 @end

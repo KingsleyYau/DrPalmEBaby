@@ -203,7 +203,7 @@
     for (ShareItemEntitlement *shareItem in AppEnviromentInstance().shareEntitlement.shares) {
         if ([shareItem.type isEqualToString:@"weixin"]) {
             // 向微信注册
-            [WXApi registerApp:shareItem.appKey];
+            [WXApi registerApp:shareItem.appKey withDescription:@"EBaby"];
         }
         else if ([shareItem.type isEqualToString:@"sinawb"]) {
             // 向新浪微博注册
@@ -211,6 +211,10 @@
             [WeiboSDK registerApp:shareItem.appKey];
         }
     }
+}
+-(void) onReq:(BaseReq *)req {
+    // 微信回调
+    
 }
 #pragma mark - 选择分享
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {

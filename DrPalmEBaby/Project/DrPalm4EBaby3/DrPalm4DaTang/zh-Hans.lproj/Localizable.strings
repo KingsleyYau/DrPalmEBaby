@@ -1,0 +1,245 @@
+/* 
+  DrPalm.strings
+  MIT Mobile
+
+  Created by fgx_lion on 12-1-5.
+  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+  zh_Hans
+*/
+
+// TODO:公共
+"YES" = "确定";
+"Cancel" = "取消";
+"LoadMore" = "加载更多";
+"SendSucceed" = "发送成功";
+"SendFail" = "发送失败";
+"New" = "new";
+"Welcome" = "欢迎";
+
+"Navigation" = "导航";
+"Latest" = "最新";
+"Back" = "返回";
+"Save" = "保存";
+"Send" = "发送";
+"Add" = "新增";
+"Edit" = "编辑";
+"Remark" = "备注";
+"Delete" = "删除";
+"EnsureDelete?" = "确定删除?";
+
+"Relay" = "转发";
+"Relpace" = "替换";
+"Post" = "发布";
+"Anwser" = "回复";
+
+"Title" = "标题";
+"Sender" = "发件人";
+"Receiver" = "收件人";
+"Location" = "地点";
+"PostTime" = "发送时间";
+"AnwserTime" = "回复时间";
+"Attachment" = "附件";
+"EndTime" = "结束时间";
+"StartTime" = "开始时间";
+"PhotoAlbumn" = "相册";
+"Camera" = "相机";
+"Content" = "内容";
+
+"CommonDetail" = "详细";
+"NoSchoolKey" = "该学校还没有创建SchoolKey";
+
+"AttachmentDownLoadFail" = "图片保存失败";
+"AttachmentDownLoadNoPictureFail" = "保存失败，全部附件都不是图片類型";
+"AttachmentDownLoadSucceed" = "图片保存成功";
+"AttachmentDownLoadAllSucceed" = "全部附件保存成功";
+"AttachmentDownLoadOnlyPicutreSucceed" = "附件中图片保存成功";
+
+"CommonRequestPotocolError" = "协议解析错误";
+"CommonRequestUrlNull" = "请求链接为空";
+"CommonRequestGetGatewayFailed" = "获取网关错误";
+"CommonRequestOnlyWifi" = "您开启了仅WiFi使用且当前不是Wifi网络连接";
+"CONNECTION_ERROR" = "网络不给力哦";
+
+// 分享
+"Share_Email" = "电子邮件";
+"Share_SMS" = "短信";
+"Share_Facebook" = "Facebook";
+"Share_Twitter" = "Twitter";
+"Share_Sina" = "新浪微博";
+"Share_QQ" = "腾讯微博";
+"Share_Cancel" = "取消";
+"Share_WeiXin" = "微信";
+
+// 下拉列表
+"Release to refresh" = "释放并刷新";
+"Pull down to refresh" = "下拉刷新";
+"Loading" = "加载中...";
+
+"CommonEnsureLogout" = "需要切换幼儿园吗？这样会注销哦。";
+"DropDownTips" = "下拉可以刷新";
+"LastUpdate" = "最后更新";
+"LastUpdateTime" = "最后更新时间";
+
+// TODO:导航
+"MainGuideNavigationTitle" = "导航分区";
+
+// TODO:最新
+"LatestSchoolNewsNavigationTitle" = "最新校园新闻";
+"LatestClassEventNavigationTitle" = "最新班级通告";
+
+// TODO:我的校园
+"SchoolCategoryActivityTitle" = "校园活动";
+"SchoolCategoryDietTitle" = "幼儿食谱";
+"SchoolCategoryNewsTitle" = "校园新闻";
+"SchoolCategoryChildrenTitle" = "育儿知识";
+"SchoolCategoryAlbumTitle" = "校园相册";
+"SchoolMySchoolTitle" = "我的校园";
+"SchoolToursModule" = "校园简介";
+"SchoolPrincipalMailbox"="园长信箱";
+
+"SchoolSearchListNavigationTitle" = "校园信息搜索";
+"SchoolBookmarkListNavigationTitle" = "校园信息收藏";
+"SchoolDetailNavigationTitle" = "新闻详细";
+"SchoolAlbumnDetailNavigationTitle" = "校园相册详细";
+"SchoolAttachmentDetailNavigationTitle" = "新闻附件";
+
+"ContactTips" = "这里是园长信箱，若您对我园管理有任何意见和建议，欢迎来信，我们将认真考虑您的建议。同时欢迎新生家长咨询入学事宜，请留下您的联系方式，以便回复。";
+"ContactName" = "您的称呼:";
+"ContactNamePlaceholder" = "请输入您的称呼";
+"ContactPhone" = "联系电话:";
+"ContactPhonePlaceholder" = "请输入联系电话";
+"ContactEmail" = "电子邮箱:";
+"ContactEmailPlaceholder" = "请输入电子邮箱";
+"ContactTitle" = "留言主题:";
+"ContactTitlePlaceholder" = "请输入标题";
+"ContactContentTitle" = "留言内容";
+
+"InputSchoolNewsTitleTips" = "请输入新闻名称";
+
+// TODO:我的班级
+"ClassCategoryNewsTitle" = "班级通知";
+"ClassCategoryCommentTitle" = "班级评语";
+"ClassCategoryCoursewareTitle" = "班级计划";
+"ClassCategoryActivityTitle" = "班级活动";
+"ClassCategoryAlbumTitle" = "班级相册";
+"ClassCategoryVideoTitle" = "班级影音";
+"ClassMyClassTitle" = "我的班级";
+"ClassSendMessageTitle" = "发布消息";
+"ClassCategorySendTitle" = "已发消息";
+"ClassCategoryDraftTitle" = "草稿箱";
+"ClassCategorySysinfoTitle" = "系统消息";
+"CommunicateModule" = "家园桥";
+"InAndOutModule" = "互教通";
+"UnRegisteModule"="该机构未开通此功能";
+
+"ClassMainListViewNavigationTitle" = "班级信息收藏";
+"ClassSearchListNavigationTitle" = "班级信息搜索";
+"ClassDetailNavigationTitle" = "班级通告详细";
+"ClassAlbumnDetailNavigationTitle" = "班级相册详细";
+"ClassAttachmentViewNavigationTitle" = "班级信息附件";
+"ClassVieoDetailNavigationTitle" = "班级影音详细";
+"ClassSentDetailNavigationTitle" = "已发通告详细";
+"ClassSentAttachmentViewNavigationTitle" = "已发通告附件";
+
+"ClassCommentDetailNavigationTitle" = "通告评论";
+"ClassCommentManListNavigationTitle" = "通告评论人";
+
+"ClassReviewNavigationTitle" = "通告回评";
+
+"SystemMessageDetailNavigationTitle" = "系统消息详细";
+"CommunicateDetailNavigationTitle" = "家园桥详细";
+
+"ReaderStatus" = "已读情况";
+
+"ClassNewEventNavigationTitle" = "新建通告";
+"ClassNewAttachmentNavigationTitle" = "选择附件";
+"ClassEventOrgNavigationTitle" = "选择收件人";
+"ClassTipsAddress" = "请填写至少一个收件人";
+"ClassTipsTitle" = "请填写标题";
+"ClassTipsAttachments" = "请为相册添加至少一个附件";
+"ClassTipsContent" = "请填写內容";
+"ClassPickSelf" = "发给自己";
+"ClassPickAll" = "发给全部";
+"IsSaveDraft" = "要保存为草稿吗?";
+"SaveToDraftSuccess" = "已保存到草稿箱";
+"EnsureDeleteDraft" = "要刪除草稿吗?";
+"ClassPhotos" = "照片";
+"ClassCamera" = "相机";
+"ClassAttachmentExists" = "附件已经存在";
+"ClassAttachmentOverLimit" = "附件数超过限制";
+
+"InputClassEventTitleTips" = "请输入通告名称";
+
+
+// TODO:登录
+"Login" = "登录";
+"Logout" = "注销";
+"GetPassword" = "找回密码";
+"Account" = "帐号";
+"Password" = "密码";
+"SavePassword" = "保存密码";
+"AutoLogin" = "自动登录";
+"AccountInputTips" = "请输入您的帐号";
+"PasswordInputTips" = "请输入您的密码";
+"LoginLocalTips" = "离线登录";
+"LoginLocalTips" = "您现在是离线登录";
+"LoginUserPswError" = "您的离线帐号或密码不正确";
+"LoginIdAndPwdNotNull" = "帐号密码不能为空";
+"LoginSessionTimeOut" = "连接超时请重新登录";
+"LoginSessionKickoff" = "您的账号已经在其它地方登录，需要检查账号安全哦";
+
+// TODO:更多
+"MoreNavigationTitle" = "更多";
+"PersonalConfig" = "个人信息";
+"SystemConfig" = "系统设置";
+"EbabySet" = "幼儿园集合";
+"Help" = "使用帮助";
+"Advice" = "意见反馈";
+"Share" = "告诉朋友";
+"HotLine" = "客服热线";
+"Call" = "拨打电话";
+"Disable_HotLine" = "您的设备不能拨打电话";
+"DailHotlineTips" = "E宝贝竭诚为您服务";
+"MoreAbout" = "关于E宝贝";
+"MoreShareContent" = "我刚安装了E宝贝移动客户端，让您可随时随地通过移动终端了解学校简介、校园通知、班级信息、教师反馈、互动交流等信息，加强家校互动，动动手指就能搞定，快来体验吧！下载地址：";
+"MoreDownloadUrl" = "http://www.astar.so/ebaby/";
+
+// TODO:用户设置
+"Level" = "等级";
+"CurrentPoint" = "当前积分";
+"LevelUpPoint" = "升级积分";
+"GrowUp" = "成长点滴";
+"PersonalAlbumn" = "个人相册";
+
+// 个人相册
+"PrivateAlbum_Add_Error" = "只能为你保存最多20張照片哦";
+
+// TODO:系统设置
+"Push" = "推送";
+"Voice" = "声音";
+"Vibration" = "震动";
+"PushTime" = "推送时间";
+"ClearNews" = "清除校园消息";
+"ClearEvents" = "清除班级消息";
+"SettingsWiFiFooter" = "Apps在请求数据时会占用您的数据流量，建议在使用漫游服务时，打开此功能。";
+
+// TODO:反馈建议
+"AdviceContactLabel" = "联系方式:";
+"AdviceEmailOrPhoneNum" = "邮箱/手机号";
+"AdviceInputContent" = "请输入意见:";
+"AdviceContactEmpty" = "请输入联系方式";
+"AdviceContentEmpty" = "请输入意见";
+"AdviceFailed" = "发送失败";
+"AdviceSucceed" = "您的信息已经收到，是否退出?";
+
+// TODO:关于
+"About" = "关于";
+"AboutVersion" = "版本";
+"AboutAppText" = "E宝贝iPhone版本是面向幼儿园的家园沟通平台，家长可随时随地通过移动终端了解学校简介、校园通知、班级信息、教师反馈、互动交流等信息，加强家校互动，共同关注幼儿成长。如果您有改进和更新功能的建议，我们非常乐意倾听。";
+"AboutTableViewFooter"  = "运营服务商:广州澳星软件科技有限公司\n服务热线:400-700-6560\n技术研发商:广州热点软件有限公司";
+
+// TOOD:更新
+"UpdateAppTitle" = "版本更新";
+"UpdateAppNow" = "立即更新";
+"UpdateAppNever" = "不再提示";
+"UpdateAppLater" = "稍后提示";

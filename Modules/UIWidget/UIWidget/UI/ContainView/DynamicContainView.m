@@ -110,9 +110,9 @@
     return self;
 }
 - (void)reLoadView {
-//    if(self.isAnimating) {
-//        return;
-//    }
+    if(self.isAnimating) {
+        return;
+    }
     if(_isDown) {
         // 下拉收起
         [_showButton setImage:[UIImage imageWithContentsOfFile:[ResourceManager resourceFilePath:DynamicContainViewDownArrowImage]] forState:UIControlStateNormal];
@@ -153,9 +153,7 @@
             self.detailView.alpha = 0.0;
             [self addSubview:self.detailView];
             [self bringSubviewToFront:self.detailView];
-//            // 原先已经打开
-//            [self show:NO];
-
+            // 原先已经打开
         }
     }
 

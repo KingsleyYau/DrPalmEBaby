@@ -117,6 +117,10 @@
     [array addObject:barButtonItem];
     
     self.navigationItem.rightBarButtonItems = array;
+    self.navigationItem.titleView = nil;
+    
+    KKNavigationController *nvc = (KKNavigationController *)self.navigationController;
+    nvc.customTitleImage = nil;
 }
 - (void)setupBackgroundView {
     [super setupBackgroundView];
@@ -148,12 +152,6 @@
     KKNavigationController *nvc = (KKNavigationController *)self.navigationController;
     MainTabBarController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"MainTabBarController"];
     
-    UIImage *image = nil;
-    image = [UIImage imageWithContentsOfFileLanguage:[ResourcePacketManagerInstance() resourceFilePath:NavigationTitleImage] ofType:@"png"];
-    if (!image) {
-        image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:NavigationDefaultTitleImage ofType:@"png"]];
-    }
-    nvc.customTitleImage = image;
     [nvc pushViewController:vc animated:YES];
 }
 - (void)filterArray:(NSArray*) array {
